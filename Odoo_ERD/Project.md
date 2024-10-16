@@ -4,12 +4,11 @@ title: "Models: Related to Project"
 ---
 
 
-
 erDiagram
-
-    project_project ||--o| account_analytic_account : has
+    project_project ||--|| account_analytic_account : has
     account_analytic_account ||--|| budget_analytic : has
     budget_analytic ||--o| budget_line : has
+
 
     project_project{
         int id PK "データベースID"
